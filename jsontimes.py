@@ -7,7 +7,7 @@ from time import sleep
 import socket
 from os import system as sys
 from math import trunc
-
+#hielllelelelelel
 def get_key(dicto, val):
     for key, value in dicto.items():
          if val == value:
