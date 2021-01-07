@@ -1,25 +1,19 @@
 import json
-from playsound import playsound
 from datetime import datetime, date
 import datetime as dt
 import requests
 from time import sleep
 import socket
-from os import system as sys
+import os
+import platform
 from math import trunc
-#hielllelelelelel
-#hello?
+
 def get_key(dicto, val):
     for key, value in dicto.items():
          if val == value:
              return key
 
-def test_connection():
-    try:
-        socket.create_connection(("website.com", 80))
-        return True
-    except OSError:
-        return False
+
 
 
 now = datetime.now()
@@ -130,7 +124,15 @@ def nearest_prayer_time(prayers_dict, datetime):
             
 
 
-def main():        
+def main():
+    def playsound_os(preference, format):
+        if platform.system() == "Linux":
+            os.system(f"aplay {preference}.{format}")
+        else:
+            from playsound import playsound
+            playsound(f"{preference}.{format}")
+        return platform.system()
+    os = str(platform.system())        
     checking = True
     while checking:
         today = date.today().strftime('%b %d %a')
@@ -142,11 +144,9 @@ def main():
         diff = upt - current_time
         trunc_diff_h = trunc(diff.seconds / 3600)
         trunc_diff_s = (diff.seconds // 60) % 60
-
         print(f"{trunc_diff_h} hours and {trunc_diff_s} minutes until {up_prayer}.");sleep(2)
+        playsound_os("Adhan_M.Alafasy", "mp3")
 
-
-    # playsound("Adhan_M.Alafasy.mp3")
 
 if __name__ == "__main__":
     main()
