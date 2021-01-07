@@ -5,6 +5,7 @@ import requests
 from time import sleep
 import socket
 import os
+from os import system as sys
 import platform
 from math import trunc
 
@@ -127,12 +128,12 @@ def nearest_prayer_time(prayers_dict, datetime):
 def main():
     def playsound_os(preference, format):
         if platform.system() == "Linux":
-            os.system(f"aplay {preference}.{format}")
+            sys(f"aplay {preference}.{format}")
         else:
             from playsound import playsound
             playsound(f"{preference}.{format}")
         return platform.system()
-    os = str(platform.system())        
+    o_s = str(platform.system())        
     checking = True
     while checking:
         today = date.today().strftime('%b %d %a')
