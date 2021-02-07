@@ -1,4 +1,4 @@
-# The-Adhan-Project
+# sound-sys project
 
 ## Problems :
   ### Cloned repository not syncing.
