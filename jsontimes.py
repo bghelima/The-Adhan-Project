@@ -148,6 +148,7 @@ def main():
     # playsound("Adhan_M.Alafasy.mp3")
 
 if __name__ == "__main__":
+    print("Hi.")
     main()
                 
 
