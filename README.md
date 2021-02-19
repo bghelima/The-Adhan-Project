@@ -7,13 +7,8 @@
   ### "Can't push refs to remote" when trying to contribute.
   1. Command line: `git pull --rebase origin branchname`
   2. Then:`git push origin branchname`
-  
-    
-    
-    
-    
-    
-## Developer Help:
+<br /><br /><br /><br /><br /><br />    
+## <span style="color:blue">If you want to build this yourself</span>:
   ### Reseeed Tutorial Link for 2 mic piHat
     - https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/
   ### Arecord Link, how to use linux arecord and aplay efficiently.
