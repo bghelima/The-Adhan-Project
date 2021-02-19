@@ -4,7 +4,7 @@
   ### Cloned repository not syncing to remote.
   1. Cd into the cloned repository
   2. Then:```git pull origin master``` into the command line
-  ### "Can't push refs to remote" when trying to contribute.
+  ### "Can't push refs to remote" when trying to push.
   1. Command line: `git pull --rebase origin branchname`
   2. Then:`git push origin branchname`
 <br /><br /><br /><br /><br /><br />    
