@@ -1,11 +1,20 @@
 import json
+<<<<<<< HEAD
 from playsound import playsound
+=======
+>>>>>>> 343d89efdb3de6b1e0e9166f88219569ec276d99
 from datetime import datetime, date
 import datetime as dt
 import requests
 from time import sleep
 import socket
+<<<<<<< HEAD
 from os import system as sys
+=======
+import os
+from os import system as sys
+import platform
+>>>>>>> 343d89efdb3de6b1e0e9166f88219569ec276d99
 from math import trunc
 
 def get_key(dicto, val):
@@ -13,12 +22,16 @@ def get_key(dicto, val):
          if val == value:
              return key
 
+<<<<<<< HEAD
 def test_connection():
     try:
         socket.create_connection(("website.com", 80))
         return True
     except OSError:
         return False
+=======
+
+>>>>>>> 343d89efdb3de6b1e0e9166f88219569ec276d99
 
 
 now = datetime.now()
@@ -129,7 +142,19 @@ def nearest_prayer_time(prayers_dict, datetime):
             
 
 
+<<<<<<< HEAD
 def main():        
+=======
+def main():
+    def playsound_os(preference, format):
+        if platform.system() == "Linux":
+            sys(f"aplay {preference}.{format}")
+        else:
+            from playsound import playsound
+            playsound(f"{preference}.{format}")
+        return platform.system()
+    o_s = str(platform.system())        
+>>>>>>> 343d89efdb3de6b1e0e9166f88219569ec276d99
     checking = True
     while checking:
         today = date.today().strftime('%b %d %a')
@@ -141,6 +166,7 @@ def main():
         diff = upt - current_time
         trunc_diff_h = trunc(diff.seconds / 3600)
         trunc_diff_s = (diff.seconds // 60) % 60
+<<<<<<< HEAD
 
         print(f"{trunc_diff_h} hours and {trunc_diff_s} minutes until {up_prayer}.");sleep(2)
 
@@ -152,6 +178,13 @@ if __name__ == "__main__":
     a = 1
     b = 2
     c = 3
+=======
+        print(f"{trunc_diff_h} hours and {trunc_diff_s} minutes until {up_prayer}.");sleep(2)
+        playsound_os("Adhan_M.Alafasy", "mp3")
+
+
+if __name__ == "__main__":
+>>>>>>> 343d89efdb3de6b1e0e9166f88219569ec276d99
     main()
                 
 
